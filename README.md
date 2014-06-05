@@ -10,14 +10,20 @@ Swift playground for exploring the [swift programming language](https://develope
 
 There are a set of functions that enable the code you write to interact with the plaground UI.  For example, you can display a UIView live.  The ```XCPlayground``` module provides these functions
 
-```XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely:Bool)```
+```
+XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely:Bool)
+```
 
 Allows async code to run.  For example, ```dispatch_*``` calls and networking.
 
-```XCPCaptureValue(identifier: String, value:AnyObject)```
+```
+XCPCaptureValue(identifier: String, value:AnyObject)
+```
 
 Displays the value in the view pane with the identifier as the title
 
-```XCPShowView(identifier: String, view: NSView)```
+```
+XCPShowView(identifier: String, view: NSView)
+```
 
 Display the provided view in the view pane with the identifier as the title
