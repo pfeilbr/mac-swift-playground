@@ -5,7 +5,11 @@ import XCPlayground
 import Dispatch
 import ObjectiveC
 
+
 class Fetch {
+    init() {
+        
+    }
     class func fetch(#url: NSURL,block: (data:String, error:NSError?) -> Void) -> Void {
 
     var request = NSURLRequest(URL: url)
@@ -17,6 +21,24 @@ class Fetch {
         
     }
 }
+
+reflect(Fetch()).summary
+reflect(Fetch()).disposition
+reflect(Fetch()).valueType
+
+
+objc_getClass("NSURL").classDescription
+
+// optionals
+var i:Int? // initial value is nil
+i //
+i = "123".toInt()
+var j:Int = i! // unwrap the optional
+
+
+var d = Dictionary<String,AnyObject?>()
+d["data"] = NSData()
+d["name"] = "hello"
 
 func sayHello(name personName: String, last lastName:String) -> String {
     let greeting = "Hello, " + personName + "!"
@@ -163,9 +185,9 @@ for fn in fns {
 join(",", results)
 
 
-dispatch_async(dispatch_get_current_queue(), {
-    XCPCaptureValue("dispatch val", "async here")
-})
+//dispatch_async(dispatch_get_current_queue(), {
+//    XCPCaptureValue("dispatch val", "async here")
+//})
 
 
 
